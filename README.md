@@ -1067,6 +1067,31 @@ escuchar.run()
 
 
 
+# BACKDOOR INDETECTABLE
+
+* A dia de hoy este backdoor sigue indetectable por los antiviruses de windows, pero nunca se sabe cuando implementaran nuevas escrituras en los antiviruses.
+* Como te diste cuenta en el backdoor use palabras como "backdoor" "ejecutar_comando" lo cual salta las alarmas y no es la mejor manera de desarrollar un virus un backdoor, pero aqui es una clase de desarroloo de un backdoor desde 0.
+
+
+
+
+# Y como lo hacemos indetecatble?
+ 
+ 
+ 
+ ```bash
+Lo mejor seria usar palabras y frases cuales solo tu reconozcas, sin que ningun antivirus pueda leerlos como amenazas.
+```
+
+
+
+
+
+
+
+
+
+
 
 * TMCyber ofrece su información en Internet básicamente en beneficio de las personas interesadas en los esfuerzos y en favor de la puesta en práctica de la protección y promoción de la seguridad informatica (Ciberseguridad) y el Hacking Etico.""
 * TMCyber se reserva los derechos de propiedad del material que aparece en la página en Internet. Por favor envíe un correo electrónico a tonymerisan@cyberservices.com con respecto al uso de los materiales.
