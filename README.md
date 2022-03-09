@@ -1068,6 +1068,7 @@ escuchar.run()
 
 
 
-
+* TMCyber ofrece su información en Internet básicamente en beneficio de las personas interesadas en los esfuerzos y en favor de la puesta en práctica de la protección y promoción de la seguridad informatica (Ciberseguridad) y el Hacking Etico.""
+* TMCyber se reserva los derechos de propiedad del material que aparece en la página en Internet. Por favor envíe un correo electrónico a tonymerisan@cyberservices.com con respecto al uso de los materiales.
 
  
