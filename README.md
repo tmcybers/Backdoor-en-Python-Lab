@@ -1201,7 +1201,7 @@ pyinstaller --onefile --windowed --noconsole -i=zoom.ico backdoor-windows.py --n
 * En la carpeta dist , se encuentra el .exe.
 
 
-# Al abrir el .exe, el listener abre conexion enseguida, el listener tiene que correr siempre hasta que la victima cae.
+# Al abrir el .exe, el listener abre conexion enseguida, el listener tiene que correr siempre.
 ![zoom ubuntu](https://user-images.githubusercontent.com/97669969/157545308-a79ea6c7-3afb-494b-91b2-4f5f623fde1b.png)
 
 
@@ -1211,9 +1211,13 @@ pyinstaller --onefile --windowed --noconsole -i=zoom.ico backdoor-windows.py --n
 # Concluio de que esta clase, este backdoor a dia de hoy es indetectable por los antiviruses.
 # Siempre que se siga las mejores practicas de codigo y cualquier funcion/variable etc que declares tienen que seguir la regla de la Invisibilidad!
 
-* Recuerda : no saltes las alarmas ni en tu casa, ni en la de tu vecino.
+* Recuerda : si no saltas las alarmas en tu casa, en el 'target' tampoco saltara.
+
+
 
 # TMCYber' was here./
+
+
 
 
 
