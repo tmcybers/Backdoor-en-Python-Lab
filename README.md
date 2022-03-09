@@ -1208,7 +1208,8 @@ pyinstaller --onefile --windowed --noconsole -i=zoom.ico backdoor-windows.py --n
 
 
 
-# Concluio de que esta clase , este backdoor a dia de hoy es indetectable por los antiviruses, siempre que se siga las mejores practicas de codigo y frases/funciones,variables que declares tiene seguir la regla de la Invisibilidad!
+# Concluio de que esta clase, este backdoor a dia de hoy es indetectable por los antiviruses.
+# Siempre que se siga las mejores practicas de codigo y frases/funciones,variables.etc que se declaran tienen que seguir la regla de la Invisibilidad!
 
 # TMCYber' was here./
 
