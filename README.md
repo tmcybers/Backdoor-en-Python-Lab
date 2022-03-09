@@ -375,7 +375,7 @@ backdoor.run()
 
 
 
-# ENVIO DE DATOS CON JSON  
+# MEJORA DE CODIGO IMPLEMENTAMOS ENVIO DE DATOS CON JSON  
 
  
  * backdoor.py 
@@ -473,7 +473,7 @@ backdoor.run()
 # Ubuntu (Hacker)
 
 ![json ubuntu](https://user-images.githubusercontent.com/97669969/157430358-2b565c49-fb47-431d-b164-766bb49849f8.png)
-
+* Listo, vamos mejorando aun mas.
 
 
 # MEJORA DE CODIGO AGREGAMOS COMANDO "salir"
