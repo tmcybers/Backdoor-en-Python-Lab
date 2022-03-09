@@ -91,12 +91,9 @@ ncat -l -vv 4444
 
 # Parrot (Target) 
 
- * Ejecutamos comandos 
+ # Mejoramos codigo,implementamos ejecution de comandos. 
 
  
-
- 
-
 # backdoor.py 
 
  
