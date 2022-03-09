@@ -1140,9 +1140,9 @@ backdoor.run()
 
 # BACKDOOR INDETECTABLE
 
-* A dia de hoy este backdoor sigue indetectable por el antivirus puesto que es un archivo.py, y no .exe , enseguida lo convertimos a exe.
+* Backdoor sigue indetectable por el antivirus puesto que es un archivo.py, y no .exe , enseguida lo convertimos a exe.
 
-* Como te diste cuenta en el backdoor use palabras como "backdoor" "ejecutar_comando" lo cual salta las alarmas y no es la mejor manera de desarrollar un virus un backdoor, pero aqui es una clase de desarrollo de un backdoor desde 0'.
+* Como te diste cuenta en el backdoor use palabras como "backdoor" "ejecutar_comando" lo cual salta las alarmas y no es la mejor manera de desarrollar un virus      un backdoor, pero aqui es una clase de desarrollo de un backdoor unicamente, la imaginacion es tuya.
 
 
 
