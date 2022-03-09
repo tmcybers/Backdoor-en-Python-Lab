@@ -1075,7 +1075,7 @@ escuchar.run()
 
 
 
-# Y como lo hacemos indetecatble?
+# Y como lo hacemos indetectable?
  
  
  
