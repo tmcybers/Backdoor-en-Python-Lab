@@ -1207,7 +1207,7 @@ pyinstaller --onefile --windowed --noconsole -i=zoom.ico backdoor-windows.py --n
 
 
 
-
+"TMCyber ofrece su información en Internet básicamente en beneficio de las personas interesadas en los esfuerzos y en favor de la puesta en práctica de la protección y promoción de la seguridad informatica (Ciberseguridad) y el Hacking Etico.""
 
 
 
