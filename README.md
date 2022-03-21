@@ -1208,8 +1208,20 @@ pyinstaller --onefile --windowed --noconsole -i=zoom.ico backdoor-windows.py --n
 
 
 
-'TMCyber offers its information on the Internet basically for the benefit of people interested in the efforts and in favor of the implementation of the protection and promotion of computer security (Cybersecurity) and Ethical Hacking'
-'TMCyber is not responsible for the misuse of this tool'
+
+
+
+
+
+
+
+
+
+
+
+
+# TMCyber offers its information on the Internet basically for the benefit of people interested in the efforts and in favor of the implementation of the protection and promotion of computer security (Cybersecurity) and Ethical Hacking'
+# TMCyber is not responsible for the misuse of this tool'
 
 
 
