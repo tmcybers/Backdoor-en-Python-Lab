@@ -1230,3 +1230,5 @@ pyinstaller --onefile --windowed --noconsole -i=zoom.ico backdoor-windows.py --n
  <a href="https://www.buymeacoffee.com/tonymerisan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
  
  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E1EBFQ3)
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Courier+new&color=%23808080&size=30&width=1000&duration=6969&lines=I+am+not+responsible+for+[the+misuse+of+my+tools]!)](https://git.io/typing-svg)
